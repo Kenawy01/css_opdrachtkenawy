@@ -72,3 +72,93 @@ const departments = {
 }
 
 console.log(departments);
+
+// Opdracht 1 - Gegevens aanspreken
+
+console.log('De afdeling Sales heeft ' + departments.sales.numberOfEmployees + ' medewerkers');
+console.log('Marketing is een leuke afdeling om te werken. ' +departments.marketing.description);
+console.log('De afdeling Customer Service heeft ' +departments["customer-service"].numberOfEmployees + ' medewerkers');
+console.log('Sales is een uitdagende afdeling om te werken als Verkoopmanager.  ' +departments.sales.description);
+
+// Opdracht 2 - prompten en beslissen
+
+let gekozenAfdeling = prompt('Over welke afdeling wil je meer informatie? Kies uit: [marketing / sales / customer-service]');
+
+if (gekozenAfdeling === 'marketing') {
+    console.log('Je koos marketing ' + departments.marketing.description);
+} else if (gekozenAfdeling === 'sales') {
+    console.log('Je koos sales ' + departments.sales.description);
+} else if (gekozenAfdeling === 'customer-service') {
+    console.log('Je koos customer-service ' + departments["customer-service"].description);
+}
+else {
+    console.error("Ongeldige keuze. Probeer het opnieuw door de pagina te verversen.");
+    }
+
+// Opdracht 3 - een nieuwe prompt
+
+if (gekozenAfdeling === 'marketing') {
+    let gekozenFunctieIndex = prompt(`Je koos marketing. Over welke functie wil je meer weten? Voer een getal tussen 0 en 4 in!
+    0: ${departments.marketing.jobs[0].title},
+    1: ${departments.marketing.jobs[1].title},
+    2: ${departments.marketing.jobs[2].title},
+    3: ${departments.marketing.jobs[3].title},
+    4: ${departments.marketing.jobs[4].title}`);
+
+}
+
+// console.log(input)
+//
+// if (input === '0') {
+//     console.log('Je koos ' + departments[userInput].jobs[0].title.toLowerCase() + '.' + ' Een uitdagende rol! ' + departments[userInput].jobs[0].description + '')
+// } else if (input === '1') {
+//     console.log('Je koos ' + departments[userInput].jobs[1].title.toLowerCase() + '.' + ' Een uitdagende rol! ' + departments[userInput].jobs[1].description + '')
+// } else if (input === '2') {
+//     console.log('Je koos ' + departments[userInput].jobs[2].title.toLowerCase() + '.' + ' Een uitdagende rol! ' + departments[userInput].jobs[2].description + '')
+// } else if (input === '3') {
+//     console.log('Je koos ' + departments[userInput].jobs[3].title.toLowerCase() + '.' + ' Een uitdagende rol! ' + departments[userInput].jobs[3].description + '')
+// } else {
+//     console.log
+//     ('Ongeldige keuze. Probeer het opnieuw door de pagina te verversen.')
+//     document.getElementById('error-message').innerHTML = 'Ongeldige keuze. Probeer het opnieuw door de pagina te verversen.'
+// }
+//
+//
+// document.getElementById('title').textContent = 'Mijn uitzendbureau';
+// document.getElementById('role-title').textContent = departments[userInput].jobs[input].title
+// document.getElementById('department-description').textContent = departments[userInput].description
+// document.getElementById('role-description').textContent = departments[userInput].jobs[input].description
+
+// if (gekozenAfdeling === 'MarketingManager') {
+//         console.log(`Je koos ${departments.marketing.jobs[0].title}. Een uitdagende rol! ${departments.marketing.jobs[0].description}`);
+//     }
+// if (gekozenAfdeling === 'Digital Marketing Specialist') {
+//     console.log(`Je koos ${departments.marketing.jobs[1].title}. Een uitdagende rol! ${departments.marketing.jobs[1].description}`);
+// }
+// if (gekozenAfdeling === 'Contentmarketeer') {
+//     console.log(`Je koos ${departments.marketing.jobs[2].title}. Een uitdagende rol! ${departments.marketing.jobs[2].description}`);
+// }
+// if (gekozenAfdeling === 'Branding Agent') {
+//     console.log(`Je koos ${departments.marketing.jobs[3].title}. Een uitdagende rol! ${departments.marketing.jobs[3].description}`);
+// }
+// if (gekozenAfdeling === 'Marktonderzoeksanalist') {
+//     console.log(`Je koos ${departments.marketing.jobs[4].title}. Een uitdagende rol! ${departments.marketing.jobs[4].description}`);
+//     }
+//
+// switch (departments.marketing) {
+//     case 0:
+//         console.log(`Je koos ${departments.marketing.jobs[0].title}. Een uitdagende rol! ${departments.marketing.jobs[0].description}`);
+//         break;
+//     case 1:
+//         console.log(`Je koos ${departments.marketing.jobs[1].title}. Een uitdagende rol! ${departments.marketing.jobs[1].description}`);
+//         break;
+//     case 2:
+//         console.log(`Je koos ${departments.marketing.jobs[2].title}. Een uitdagende rol! ${departments.marketing.jobs[2].description}`);
+//         break;
+//     case 3:
+//         console.log(`Je koos ${departments.marketing.jobs[3].title}. Een uitdagende rol! ${departments.marketing.jobs[3].description}`);
+//         break;
+//     default:
+//         console.log("Ongeldige invoer. Voer een getal tussen 0 en 3 in.");
+// }
+
